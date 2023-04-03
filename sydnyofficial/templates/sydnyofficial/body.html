@@ -1,0 +1,46 @@
+{% extends "sydnyofficial/index.html" %}
+<!-- -->
+{% block content %}
+  {% load static %}
+  <video id="videoBG" loop muted autoplay poster="{% static 'poster.png' %}">
+      <source src="{% static 'Sydny_Sundown.mp4' %}" type="video/mp4">
+  </video>
+
+  <div class="mycontent">
+    {% block navigation %}
+      {% include 'sydnyofficial/navigation.html' %}
+    {% endblock  %}
+
+    {% block header-text %}
+      {% include 'sydnyofficial/header-text.html' %}
+    {% endblock  %}
+
+    <section class="container">
+      {% block video %}
+        {% include 'sydnyofficial/myvideo.html' %}
+      {% endblock  %}
+
+      {% block audio %}
+        {% include 'sydnyofficial/myaudio.html' %}
+      {% endblock  %}
+
+    </section>
+
+    {% block contactform %}
+      {% include 'sydnyofficial/contact-form.html' %}
+    {% endblock  %}
+
+    {% block gallery %}
+      {% include 'sydnyofficial/gallery.html' %}
+    {% endblock  %}
+
+    {% block footer %}
+      {% include 'sydnyofficial/footer.html' %}
+    {% endblock  %}
+    
+  </div>
+
+  
+
+
+{% endblock content %}

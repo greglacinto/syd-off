@@ -1,0 +1,24 @@
+<!-- myvideo -->
+<div class="card g-bg-transparent mb-5">
+  <div class="card-header  text-light">
+    <h4 class="my-0">MY</h4>
+    <h5 class="mt-0">VIDEO</h5>
+    <hr class="bg-warning my-0 underline float-left">
+  </div>
+  
+  <div class="card-body mb-5 pb-5 row justify-content-around ">
+    {% for videos in videos %}
+    <div class="card col-md-5 mb-4 bg-transparent text-light">
+      <div class="card-body col-md embed-responsive embed-responsive-16by9">
+        <iframe 
+          style="border-radius:12px" 
+          src="{{ videos.url}}" 
+          width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; 
+          clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+        </iframe>
+      </div>
+    </div> 
+    {% endfor %}
+  </div>
+  
+</div>
