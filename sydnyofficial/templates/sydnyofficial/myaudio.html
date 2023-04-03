@@ -1,0 +1,28 @@
+<!-- myaudio -->
+<div class="card g-bg-transparent">
+  <div class="card-header  text-light">
+    <h4 class="my-0">MY</h4>
+    <h5 class="mt-0">MUSIC</h5>
+    <hr class="bg-warning my-0 underline float-left">
+  </div>
+  
+  <div class="card-body mb-5 row justify-content-around ">
+    {% for audios in audios %}
+    <div class="card mb-5 col-md-5 bg-transparent text-light">
+      <div class="card-body col-md pb-1 embed-responsive embed-responsive-16by9">
+        <iframe class="pb-0"
+          style="border-radius:12px" 
+          src="{{ audios.url}}" 
+          width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; 
+          clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+        </iframe>        
+      </div>
+      <div class="text-center">
+        <a href="{{ audios.fanlink }}" class="card-link nav-link text-light">Click here for Fanlink</a>
+      </div>
+      
+    </div> 
+    {% endfor %}
+  </div>
+  
+</div>

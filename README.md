@@ -1,4 +1,4 @@
-# sydny-offial
+# sydny-official
 
 This is the sydny official web app rebuilt with python
 
